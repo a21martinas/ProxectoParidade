@@ -38,8 +38,8 @@ public class ParMainTest {
         System.out.println("comprobarParidade do cero");
         int numeroProba = 0;
         String expResult = "o numero e par";
-        String result = ParMain.comprobarParidade(numeroProba);
-        assertEquals(expResult, result);
+        String resultado = ParMain.comprobarParidade(numeroProba);
+        assertEquals(expResult, resultado);
     }
     
     @Test
@@ -47,31 +47,60 @@ public class ParMainTest {
         System.out.println("comprobarParidade dun mumero par positivo");
         int numeroProba = 2;
         String expResult = "o numero e par";
-        String result = ParMain.comprobarParidade(numeroProba);
-        assertEquals(expResult, result);
+        String resultado = ParMain.comprobarParidade(numeroProba);
+        assertEquals(expResult, resultado);
     }
     @Test
     public void testComprobararidadeImparPositivo() {
         System.out.println("comprobarParidade dun numero Impar Positivo");
         int numeroProba = 1;
         String expResult = "o numero e impar";
-        String result = ParMain.comprobarParidade(numeroProba);
-        assertEquals(expResult, result);
+        String resultado = ParMain.comprobarParidade(numeroProba);
+        assertEquals(expResult, resultado);
     }
     @Test
     public void testComprobararidadeImparNegativo() {
         System.out.println("comprobarParidade dun numero Impar negativo");
         int numeroProba = -1;
         String expResult = "o numero e impar";
-        String result = ParMain.comprobarParidade(numeroProba);
-        assertEquals(expResult, result);
+        String resultado = ParMain.comprobarParidade(numeroProba);
+        assertEquals(expResult, resultado);
     }
     @Test
     public void testComprobararidadeParNegativo() {
         System.out.println("comprobarParidade dun numero Impar negativo");
         int numeroProba = -1;
         String expResult = "o numero e impar";
-        String result = ParMain.comprobarParidade(numeroProba);
-        assertEquals(expResult, result);
+        String resultado = ParMain.comprobarParidade(numeroProba);
+        assertEquals(expResult, resultado);
     }
+
+    /**
+     * Test of verificaPar method, of class ParMain.
+     */
+    @Test
+    public void testVerificaPar0() {
+        System.out.println("verificaPar de cero");
+        int numeroProba = 0;
+        //boolean expResult = true;
+        assertTrue(ParMain.verificaPar(numeroProba));
+    }
+    
+    @Test
+    public void testVerificaPar1() {
+        System.out.println("verificaPar de 10");
+        int numeroProba = 10;
+        //boolean expResult = true;
+        assertTrue(ParMain.verificaPar(numeroProba));
+        
+    }
+    
+    @Test
+    public void testVerificaPar2() {
+        System.out.println("verificaPar de 11");
+        int numeroProba = 11;
+        //boolean expResult = false;
+        assertFalse(ParMain.verificaPar(numeroProba));
+    }
+    
 }

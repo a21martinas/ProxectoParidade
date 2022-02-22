@@ -17,13 +17,26 @@ public class ParMain {
      */
     public static void main(String[] args) {
         Scanner in=new Scanner(System.in);
-        System.out.println("introduce un número");
-        int numeroProba=in.nextInt();
+        int numeroProba=lerNumero(in);
+        System.out.println(comprobarParidade(numeroProba));
+    }
+
+    static String comprobarParidade(int numeroProba) {
+        String resultado;
         if (numeroProba%2==0){
-            System.out.println("o número é par");
+            resultado=(O_NUMERO_E_PAR);
         }else{
-            System.out.println("o número é impar");
+            resultado=(O_NUMERO_E_IMPAR);
         }
+        return resultado;
+    }
+    private static final String O_NUMERO_E_IMPAR = "o numero e impar";
+    private static final String O_NUMERO_E_PAR = "o numero e par";
+
+    private static int lerNumero(Scanner in) {
+        System.out.println("introduce un numero");
+        int numeroProba=in.nextInt();
+        return numeroProba;
     }
     
 }
